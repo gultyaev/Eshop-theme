@@ -1,0 +1,464 @@
+/*Theme Name: Eshop my theme
+Theme URI: http:none.none
+Author: Sergey Gultyaev
+Author URI: http:none.none
+Description: First working theme
+Version: 1.0*/
+
+/* General */
+
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+*::-moz-selection {
+    color: white;
+    background: black;
+}
+
+*::selection {
+    color: white;
+    background: black;
+}
+
+a {
+    text-decoration: none;
+}
+
+.clear-fix::after,
+.clear-fix::before {
+    content: "";
+    clear: both;
+}
+
+/*    *    *    *    *
+
+Links
+
+*    *    *    *    */
+
+article a:link {
+    color: blue;
+}
+
+article a:visited {
+    color: blueviolet;
+}
+
+article a:hover {
+    color: inherit;
+}
+
+article a:active {
+    color: aqua;
+}
+
+section a:link, a:visited {
+    color: black;
+}
+
+section a:hover {
+    color: #777;
+}
+
+section a:active {
+    color: inherit;
+    text-decoration: underline;
+}
+
+.main-navigation a:active {
+    text-decoration: none;
+}
+
+
+/*    *    *    *    *
+
+Heading
+
+*    *    *    *    */
+
+header {
+    height: 70px;
+    background: #f4f8ff;
+    padding: 10px;
+}
+
+header a {
+    color: inherit;
+}
+
+.site-title {
+    height: 50px;
+    line-height: 50px;
+    font-size: 50px;
+}
+
+.site-title::first-letter {
+    color: red;
+    font-family: 'Arial';
+}
+
+.site-descr {
+    height: 30px;
+    line-height: 30px;
+    font-size: 30px;
+    margin-top: 20px;
+    text-transform: lowercase;
+}
+
+.site-title,
+.site-descr {
+    display: inline-block;
+}
+
+.site-title a:link {
+    -webkit-transition: color 1.5s;
+    transition: color 1.5s;
+}
+
+.site-title a:hover {
+    color: red;
+}
+
+.site-title a:active {
+    color: red;
+}
+
+/*    *    *    *    *
+
+Navigation
+
+*    *    *    *    */
+
+.menu-show {
+    display: none;
+    background: #c9eaff;
+    width: 100%;
+    padding-left: 5px;
+    font-size: 15px;
+    line-height: 20px;
+    text-align: center;
+}
+
+.main-navigation a {
+    display: block;
+}
+
+.top-menu {
+    background: #c9eaff;
+    width: 100%;
+    display: table;
+}
+
+.main-navigation li {
+    list-style: none;
+    height: 40px;
+    line-height: 40px;
+    border-right: 1px solid black;
+    font-weight: 600;
+    cursor: pointer;
+    padding: 0 10px;
+    float: left;
+    background: #c9eaff;
+}
+
+.main-navigation li:last-child {
+    border-right: none;
+}
+
+.main-navigation li:hover {
+    background: #0837ff;
+    -webkit-transition: background 1s;
+    transition: background 1s;
+}
+
+.main-navigation li a:link,
+.main-navigation li a:visited {
+    color: black;
+}
+
+.main-navigation li a:hover {
+    color: white;
+}
+
+.main-navigation li a:active {
+    color: #00ff14;
+}
+
+/*    *    *    *    *
+
+Sidebar
+
+*    *    *    *    */
+
+aside {
+    float: left;
+    width: 150px;
+}
+
+/*    *    *    *    *
+
+Content-style
+
+*    *    *    *    */
+
+main {
+    margin: 5px;
+    padding: 20px;
+    border: 1px solid #6ad9fa;
+    box-shadow: 2px 2px 2px #999;
+}
+
+article a:link,
+article a:visited {
+    text-decoration: underline;
+}
+
+article a {
+    color: black;
+}
+
+article a:hover {
+    color: #0080ff;
+}
+
+article a:active {
+    color: #243c8b;
+}
+
+article {
+    border-bottom: 1px solid #888;
+    margin-bottom: 5px;
+    padding-bottom: 5px;
+}
+
+article:last-child {
+    border-bottom: none;
+    margin-bottom: 5px;
+    padding-bottom: 5px;
+}
+
+/*    *    *    *    *
+
+Shop
+
+*    *    *    *    */
+
+.products li {
+    width: 20%;
+    display: inline-block;
+    margin-top: 10px;
+    margin-right: 10px;
+    padding: 10px;
+    list-style-type: none;
+    border: 1px solid #abdaf4;
+    border-radius: 5px;
+    box-shadow: 2px 2px 2px black;
+}
+
+.products li img {
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+}
+
+.products li:last-child {
+    margin-right: 0;
+}
+
+.products .button {
+    display: block;
+    width: 100%;
+    height: 40px;
+    color: white;
+    background: #33a9ff;
+    font-size: 24px;
+    line-height: 40px;
+    text-align: center;
+    border-radius: 2px;
+}
+
+.products .button:hover {
+    background: #33e0ff;
+}
+
+.products .button:active {
+    background: #3333ff;
+}
+
+/*    *    *    *    *
+
+Woocommerce - myaccount
+
+*    *    *    *    */
+
+.woocommerce {
+    min-height: 200px;
+}
+
+.woocommerce p a:link,
+.woocommerce p a:visited {
+    color: red;
+    text-decoration: underline;
+}
+
+.woocommerce p a:hover {
+    text-decoration: none;
+    color: aqua;
+}
+
+.woocommerce ul {
+    float: left;
+    margin-right: 20px;
+    width: 300px;
+    font-weight: 500;
+    list-style-type: none;
+}
+
+.woocommerce ul::before,
+.woocommerce ul::after {
+    content: "";
+    clear: both;
+}
+
+.woocommerce-MyAccount-navigation a:active {
+    color: #26396c;
+}
+
+.woocommerce-MyAccount-navigation li {
+    float: none;
+    border-right: 0;
+    border-bottom: 1px solid black;
+    color: white;
+    height: 30px;
+    line-height: 30px;
+}
+
+.woocommerce-MyAccount-navigation li:hover {
+    border-right: 5px solid black;
+}
+
+.woocommerce-MyAccount-navigation li:last-child {
+    border-bottom: 0;
+}
+
+/*    *    *    *    *
+
+MEDIA SCREENS
+
+*    *    *    *    */
+@media screen and (max-width: 991px) {
+    
+    /*
+    
+    shop
+    
+    */
+    
+    .products li {
+        width: 30%;
+        font-size: 20px;
+    }
+    
+    .products li h3 {
+        font-size: 20px;
+        word-wrap: normal;
+    }
+    
+    .products .button {
+        font-size: 20px;
+    }
+    
+}
+
+@media screen and (max-width: 768px) {
+    
+    header {
+        max-width: 768px;
+    }
+    
+}
+
+@media screen and (max-width: 480px) {
+    
+    /*
+        header
+    */
+    
+    header {
+        height: 30px;
+        padding: 0 10px;
+    }
+    
+    .site-title {
+        line-height: 30px;
+        font-size: 30px;
+    }
+
+    .site-title::first-letter {
+        color: red;
+        font-family: 'Arial';
+    }
+
+    .site-descr {
+        display: none;
+    }
+    
+    /*   
+        navigation
+    */
+    
+    .menu-show {
+        display: inline-block;
+        position: relative;
+        font-weight: bold;
+        cursor: pointer;
+    }
+    
+    .main-navigation {
+        z-index: 1;
+        display: none;
+        width: 100%;
+        position: absolute;
+    }
+    
+    .main-navigation li {
+        -webkit-transition: all 300ms;
+        transition: all 300ms;
+        width: 100%;
+        border-right: none;
+        border-bottom: 1px solid black;
+    }
+    
+    .main-navigation li:last-child {
+        border-bottom: none;
+    }
+    
+    .menu-show:hover+nav {
+        display: block;
+    }
+    
+    .main-navigation:hover {
+        display: block;
+    }
+    
+    main {
+        box-shadow: none;
+        margin: 0;
+        border: none;
+    }
+    
+    /*
+    
+    shop
+    
+    */
+    
+    .products li {
+        width: 100%;
+    }
+}
